@@ -1,57 +1,61 @@
 button {
-    background: none;
-    border: none;
-    color: #888888;
-    margin: 0;
-    padding: 0;
-    font-size: 16px;
-    cursor: pointer;
+  background: none;
+  border: none;
+  color: #888888;
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  cursor: pointer;
 }
 
 button:hover {
-    color: #333;
+  color: #333;
 }
 
 .app-sidebar {
-    width: 30%;
-    height: 100vh;
-    border-right: 1px solid #333;
+  width: 30%;
+  height: 100vh;
+  border-right: 1px solid #333;
 }
 
 .app-sidebar-header {
-    display: flex;
-    justify-content: space-between;
-    padding: 25px;
+  display: flex;
+  justify-content: space-between;
+  padding: 25px;
 }
 
 .app-sidebar-header h1 {
-    margin: 0;
+  margin: 0;
 }
 
 .app-sidebar-notes {
-    height: calc(100vh - 78px);
-    overflow-y: scroll;
+  height: calc(100vh - 78px);
+  overflow-y: scroll;
 }
 
 .app-sidebar-note {
-    padding: 25px;
-    cursor: pointer;
-    transition: all 0.3s;
+  padding: 25px;
+  cursor: pointer;
+  transition: all 0.3s;
 }
 
 .sidebar-note-title {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 .app-sidebar-note p {
-    margin: 10px 0;
+  margin: 10px 0;
 }
 
 .app-sidebar-note small {
-    color: #999;
+  color: #999;
 }
 
 .app-sidebar-note:hover {
-    background: #e2e1e1;
+  background: #e2e1e1;
+}
+
+.app-sidebar-note.active {
+  background: #e2e1e1;
 }
