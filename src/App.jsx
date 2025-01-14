@@ -5,8 +5,15 @@ import Sidebar from "./components/Sidebar";
 import uuid from "react-uuid";
 
 function App() {
-  const [notes, setNotes] = useState([]);
+  const [notes, setNotes] = useState(
+    JSON.parse(localStorage.getItem("notes")) || []
+  );
   const [activeNote, setActiveNote] = useState(null);
+
+  useEffect(() => {
+    //ローカルストレージにノードを保存する
+    localStorage.setItem("notes", JSON.stringify(notes));
+  }, [notes]);
 
   const onAddNote = () => {
     console.log("追加");
