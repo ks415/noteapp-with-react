@@ -16,8 +16,11 @@ function App() {
   }, [notes]);
 
   useEffect(() => {
-    setActiveNote(notes[0].id);
-  }, []);
+    // notesが空でない場合のみ、最初のノートをアクティブにする
+    if (notes.length > 0) {
+      setActiveNote(notes[0].id);
+    }
+  }, []); // 依存配列にnotesを追加
 
   const onAddNote = () => {
     console.log("追加");
